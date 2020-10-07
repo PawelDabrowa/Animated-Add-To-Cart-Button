@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Button</title>
+ <style>
+
+  button {
+   position: absolute;
+   border: 2px solid black;
+   width: 140px;
+   height: 45px;
+   padding: 8px 18px;
+   background-color: #fff;
+   border-radius: 4px;
+   font-size: 14px;
+   text-transform: uppercase;
+   font-family: arial;
+   overflow: hidden;
+   cursor: pointer;
+  }
+
+  button span {
+   display: block;
+   position: relative;
+   top: 0;
+   transition: .2s linear;
+  }
+
+  button:hover span {
+   top: -50px;
+  }
+
+  button span::after {
+  display: block;
+  line-height: 100px;
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 25px;
+  background: url("./shopping-cart.svg");
+  background-repeat: no-repeat;
+  top: 54px;
+  right: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: .2s linear;
+  }
+
+  button:hover span::after {
+    top: 58px;
+  }
+
+ </style>
+</head>
+
+<body>
+ <button>
+   <span>Buy Now</span>
+</button>
+</body>
+
+</html>
